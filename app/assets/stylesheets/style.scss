@@ -1,0 +1,28 @@
+.be-red{
+    background-color: red;
+}
+.field{
+    margin-top: 1em;
+
+}
+.form-control{
+    border:none;
+    border-bottom: 1px solid;
+    outline: none;
+    width: 100%;
+    display: block;
+    padding: 10px 0px;
+    font-size: 1.2em;
+}
+.btn{
+    background-color: red;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 8px 5px;
+    font-size: 1.2em;
+}
+.red{
+    color: red;
+}

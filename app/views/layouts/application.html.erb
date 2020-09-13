@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RubyCrud03</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" rel="stylesheet/scss" type="style/css">
+  </head>
+
+  <body>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <header>
+  <nav class="be-red">
+ 
+  <ul class="no-list row center-xs">
+
+      <li class="col-md">
+           <% link_to "Inicio", root_path %> 
+          Inicio
+      </li>
+      <li class="col-md">
+          Diseño
+      </li>
+      <li class="col-md">
+          Tecnologia
+      </li>
+  </ul>
+  </nav>
+
+  <nav class="nav nav-tabs nav-stacked">
+    <a class="nav-link active" href="#">Active link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" href="#">Disabled link</a>
+    <% if user_signed_in? %>
+    <li>
+    <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %>
+    </li>
+      
+    <%end%>
+  </nav>
+
+  </header>
+   
+
+    <%= yield %>
+  </body>
+</html>
